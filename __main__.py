@@ -9,15 +9,17 @@ from characters import *
 from items import *
 
 player = Player('tempName',1,[sword])
-gameover = False
 
 print('What is your name, adventurer?')
 player.name = input('Name: ')
 print('Great - your name is: {name}'.format(name = player.name))
 print('Lets start your adventure!')
 
-encounter_1(player)
+status = encounter_1(player)
 
-if gameover == True:
+if status == 'Gameover':
     print('Thats the end of the game!')
     quit()
+
+print('You have a great drink back at the pub.')
+print('End of chapter 1.')

@@ -1,4 +1,8 @@
+import math
+import random
+
 def attack(attacker,target):
+    randomiser = math.floor(random.random()*10)
     damage = attacker.attack
     start_hp = target.hp
     attacker_name = attacker.name
